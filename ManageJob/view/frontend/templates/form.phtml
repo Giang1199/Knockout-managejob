@@ -1,0 +1,23 @@
+<?php
+/**
+ * @var Dtn\ManageJob\Block\GetData $block
+ */
+$a = $block->getCollection();
+?>
+<div id="manage_job" data-bind="scope:'customjob'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+    {
+        "#manage_job": {
+            "Magento_Ui/js/core/app": {
+               "components": {
+                    "customjob": {
+                        "component": "Dtn_ManageJob/js/custom-job",
+                        "workData": <?php echo $a ?>
+                    }
+                }
+            }
+        }
+    }
+    </script>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Widget/etc/widget.xsd">
+    <widget id="manage_job_widget" class="Dtn\ManageJob\Block\Widget\Job">
+        <label translate="true">Dtn Widget</label>
+        <description>Widget in Magento2</description>
+        <parameters>
+            <parameter name="managejob" xsi:type="text"  required="true" visible="true" sort_order="0" >
+                <label translate="true">Manage Job</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

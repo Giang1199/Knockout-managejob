@@ -1,0 +1,33 @@
+<label for="timejob">Chọn ngày tháng</label>
+<input id="timejob" type="date" data-bind="value : workDate ">
+<label for="decriptionjob" >Công việc phải làm</label>
+<textarea id="decriptionjob" data-bind="value : workToDo" required="true"></textarea>
+<button data-bind="click : addData">Save</button>
+<button data-bind="click : addButton">Add</button>
+
+<br>
+<h3><label for="search-value" data-bind="">Search</label></h3>
+<input id="search-value" placeholder="Search" type="search" data-bind="textInput : searchBox">
+
+<table>
+    <tr>
+
+        <td>
+            <button data-bind="click : remove">Delete</button>
+        </td>
+        <td><input type="checkbox" data-bind="checked: selectedAllWork" title="Select all/none"></td>
+        <th>Id</th>
+        <th>Thời gian</th>
+        <th>Công việc</th>
+    </tr>
+    <!-- ko foreach: ajaxData -->
+    <tr>
+        <td></td>
+        <td><input type="checkbox" data-bind="checkedValue: $data, checked: $parent.checkedValue"></td>
+        <td data-bind="text : entity_id"></td>
+        <td data-bind="text : work_time"></td>
+        <td data-bind="text : work_to_do"></td>
+        <td><button data-bind="click : $parent.editWork" >Edit</button></td>
+    </tr>
+    <!-- /ko -->
+</table>
